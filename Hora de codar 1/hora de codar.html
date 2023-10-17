@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar</title>
+</head>
+<body>
+    <script> 
+
+    inicio();
+    function inicio(){
+        var escolha = parseInt(prompt(`Escolha uma opção: \n 1.) Ver nome do carro \n 2.) Mensagem de recepção \n 3.) Segunda Recepção \n 4.) Calcular area do Retangulo \n 5.) Calcular area do Quadrado \n 6.) Calcular area do Losango \n 7.) Calcular area do Trapezio \n 8.) Calcular area do Paralelograma \n 9.) Calcular area do Triângulo \n 10.) Calcular area do Círculo`));
+        switch(escolha){
+            case 1:
+                nomeCarro()
+            break; 
+            case 2:
+                nome()
+            break;
+            case 3:
+                identificar()
+            break;    
+            case 4: 
+                areaRetangulo()
+            break;
+            case 5: 
+                areaQuadrado()
+            break;
+            case 6: 
+                areaLosango()
+            break;
+            case 7: 
+                areaTrapezio()
+            break;
+            case 8: 
+                areaParalelograma()
+            break;
+            case 9: 
+                areaTriangulo()
+            default:
+                areaCirculo()
+        }
+    }
+
+        //Escreva um programa em Javascript e crie uma variável chamada "nome_do_carro" e atribua-a um valor "Fusca". Exiba-a ao usuário. */
+        function nomeCarro(){
+        var carro = "Fusca";
+        alert (carro);
+        inicio();
+        }
+
+        
+        // Escreva um programa em Javascript em que o usuário informe o seu nome e exiba a mensagem "Olá, [NomeDoUsuario]".
+        function nome(){
+        var nome = prompt (`Escreva seu nome:`);
+        alert(`Olá, ${nome}`);
+        inicio();
+        }
+
+        // Escreva um programa em Javascript em que o usuário informe o seu nome e em seguida o programa perguntará a idade do usuário. Agora o programa deve exibir a mensagem "Olá, [NomeDoUsuario], sua idade é [idade]".
+        function identificar(){
+        var nome = prompt (`Escreva seu nome:`);
+        var idade = prompt (`Escreva sua idade:`);
+        alert(`Olá ${nome}, sua idade é ${idade}`); 
+        inicio();
+        }
+        
+        
+        // Considerando a figura abaixo, escreva um programa para cada forma que calcule e exiba em tela cada uma de suas respectivas áreas. O usuário irá informar os valores de cada variável.
+        // retangulo
+        function areaRetangulo(){
+        var altura = prompt ("Informe a altura do retangulo");
+        var base = prompt ("Informe a base do retangulo");
+        alert("A área do retangulo é " + altura*base);
+        inicio()
+        }
+       
+        //quadrado
+        function areaQuadrado(){
+        var lado = prompt ("Informa o lado do quadrado");
+        alert("A área do quadrado é " + lado*lado + "m²");
+        inicio()
+        }
+
+        //losango
+        function areaLosango(){
+        var diagonalMaior = prompt ("Informa a diagonal maior do Losango");
+        var diagonalMenor = prompt ("Informa a diagonal menor do losango");
+        alert("A área do losango é " + diagonalMaior*diagonalMenor/2);
+        inicio()
+        }
+
+        //trapezio
+        function areaTrapezio(){
+        var B = prompt ("Informe a base maior do trapezio");
+        var b = prompt ("Informe a base menor do trapezio");
+        var h = prompt ("Informe a altura do trapezio");
+        alert("A área do trapezio é " + B*b*h/2);
+        inicio()
+        }
+
+        //paralelograma
+        function areaParalelograma(){
+        var alturaParalelograma = prompt ("Informe a altura do paralelograma");
+        var baseParalelograma = prompt ("Informe a base do paralelograma");
+        alert("A área do paralelograma é " + baseParalelograma*alturaParalelograma);
+        inicio()
+        }
+
+        //triangulo
+        function areaTriangulo(){
+        var baseTriangulo = prompt ("Informe a base do trinagulo");
+        var alturtaTriangulo = prompt ("Informe a altura do triangulo");
+        alert("A área do triangulo é " + baseTriangulo*alturtaTriangulo/2);
+        inicio()
+        }
+
+        //circulo
+        function areaCirculo(){
+        var raio = parseFloat(prompt("Informe o raio do circulo"));
+        var areaCirculo = Math.PI * Math.pow(raio, 2);
+        alert("A área do circulo é " + areaCirculo);
+        inicio()
+        }
+
+    </script>
+</body>
+</html>
