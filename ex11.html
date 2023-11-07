@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert(`Bem vindo(a) a micro calculadora`);
+        var num1 = parseInt(prompt(`Informe um número`));
+        var num2 = parseInt(prompt(`Informe outro número`));
+
+        inicio()
+        function inicio(){
+            var escolha = parseInt(prompt(`Selecione uma opção: \n 1) Adição \n 2) Subtração \n 3) Divisão \n 4) Multiplicação`))
+            switch (escolha){
+            case 1:
+                calcAdicao()
+                break;
+            case 2: 
+                calcSubtracao()
+                break;
+            case 3: 
+                calcDivisao()
+                break;
+            default:
+                calcMultiplicacao()
+        } }
+
+        function calcAdicao(){
+            soma = num1 + num2;
+            alert(`O valor da soma é ${soma}`);
+            inicio();
+        }
+
+        function calcSubtracao(){
+            subtracao = num1 - num2;
+            alert(`O valor da subtração é ${subtracao}`);
+            inicio();
+        }
+
+        function calcDivisao(){
+            dividir = num1 / num2;
+            alert(`O valor da divisão é ${dividir}`);
+            inicio();
+        }
+
+        function calcMultiplicacao(){
+            multiplicar = num1*num2;
+            alert(`O valor da multiplicação é ${multiplicar}`);
+            inicio();
+        }
+    </script>
+</body>
+</html>

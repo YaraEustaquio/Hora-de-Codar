@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert(`Bem vindo(a) a calculadora do Peso Ideal`);
+        var h = parseFloat(prompt(`Informe sua altura em metros:`))
+
+        inicio()
+        function inicio(){
+            var escolha = parseInt(prompt(`Selecione uma opção: \n 1)Feminino \n 2)Masculino`))
+            switch (escolha){
+            case 1:
+                calcFeminino()
+                break;
+            case 2: 
+                calcMasculino()
+                break;
+            default:
+                alert(`Não exste essa opção`)
+        } }
+
+        function calcFeminino(){
+            var pesoMulher = (62.1 * h) - 44.7;
+            alert(`Seu Peso Ideal é ${pesoMulher}`)
+            return;
+        }
+
+        function calcMasculino(){
+            var pesoHomem = (72.7 * h) - 58;
+            alert(`Seu Peso ideal é ${pesoHomem}`)
+            return;
+        }
+
+    
+    </script>
+</body>
+</html>
