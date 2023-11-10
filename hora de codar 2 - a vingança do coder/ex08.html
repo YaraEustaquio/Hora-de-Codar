@@ -6,20 +6,30 @@
     <title>Document</title>
 </head>
 <body>
+
     <script>
-    var soma = 0;  // Inicializa a variável soma com zero
+    //Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses números forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente"
+
+    var soma = 0;  
     var valores = [];
 
     for (var i = 0; i < 4; i++) {
-    var numero = parseFloat(prompt(`Digite o ${i + 1}º número:`));  // Lê um número do usuário
-    valores.push(numero);  // Adiciona o número ao array de valores i
+    var numero = parseFloat(prompt(`Digite o ${i +1}º número:`));  
     
-    // if (numero > 0 && numero < 10) {
-    //     soma += numero;
-    //     soma / 4;
-        
-    // }
-    // }
+    
+    if (numero > 0 && numero < 10) {
+        valores.push(numero);  
+        soma += numero;
+        var media = soma / valores.length;
+    }
+    }
+    
+    if (media > 5){
+        alert(`Você passou no teste! Sua média é ${media}`)
+    } else{
+    alert(`Tente novamente!`);
+    }
+     
     </script>
 </body>
 </html>
