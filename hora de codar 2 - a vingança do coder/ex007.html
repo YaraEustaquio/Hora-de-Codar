@@ -7,24 +7,22 @@
 </head>
 <body>
     <script>
+    // Faça um programa que leia 6 números que o usuário vai informar. Todos os números lidos com valor inferior a 72 devem ser somados. Escreva o valor final da soma efetuada e também todos valores que o usuário informou.  
+    var soma = 0; 
+    var valores = [];  
 
-    var soma = 0;  // Inicializa a variável soma com zero
-    var valores = [];  // Inicializa um array para armazenar todos os valores informados
-
-    // Loop para ler os 6 números
     for (var i = 0; i < 6; i++) {
-    var numero = parseFloat(prompt(`Digite o ${i + 1}º número:`));  // Lê um número do usuário
+    var numero = parseFloat(prompt(`Digite o ${i + 1}º número:`));  
     valores.push(numero);  // Adiciona o número ao array de valores informados
     
     if (numero < 72) {
-        soma += numero;  // Adiciona o número à soma se for inferior a 72
+        soma += numero;  
     }
     }
 
-    // Exibe o valor final da soma e todos os valores informados
     alert(`Valor final da soma dos números menores que 72: ${soma}`);
     alert(`Todos os valores informados: ${valores}`);
-    
+            
     </script>
 </body>
 </html>
