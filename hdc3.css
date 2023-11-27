@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: #202631;
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.botoes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+}
+.linha {
+    display: flex;
+    justify-content: center;
+}
+.meusBotoes{ 
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px 20px;
+    color: #14fff1;
+    border: 5px solid #14fff1;
+    border-radius: 10px;
+    margin: 5% 5%;
+
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 29px #14fff1;
+
+    box-shadow: inset 0 0  22px #14fff1, 0 0 22px #14fff1;
+    position: relative;
+}
+.meusBotoes::before{
+    pointer-events: none;
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #14fff1;
+    left: 0;
+    top: 90px;
+    transform: perspective(100px) rotatex(20deg) scale(1, 0.25);
+    filter: blur(60px);
+    opacity: 0.6;
+}
+.meusBotoes::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #14fff1;
+    box-shadow: 0 0 128px 32px #14fff1;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+.meusBotoes:hover::after,
+.meusBotoes:focus::after{
+    opacity: 1;
+}
+.meusBotoes:hover::before,
+.meusBotoes:focus::before{
+    opacity: 1;
+}
+.meusBotoes:hover,
+.meusBotoes:focus{
+    color: #202631;
+    text-shadow: none;
+}
+  
